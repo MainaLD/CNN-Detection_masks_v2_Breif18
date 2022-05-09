@@ -1,7 +1,7 @@
 import streamlit as st 
 from PIL import Image
 import cv2
-from detect_mask import afficher_visage
+from main_dir/detect_mask import afficher_visage
 
 image_defaut = "./images/004.jpg"
 
