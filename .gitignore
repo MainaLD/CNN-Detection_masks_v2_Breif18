@@ -1,0 +1,16 @@
+model_mask.h5
+# images
+Model_detection_Appli_detection-ds-notebook.ipynb
+Model_detection_Appli_detection.ipynb
+Model_detection_Model_CNN.ipynb
+Appli_detection.ipynb
+app2.py
+detection_visage.py
+images\concert-covid-barcelone_6304058.jpg
+detect_visage.py
+detection_mask.py
+images\concert-covid-barcelone_6304058.jpg
+images\Document1.jpg
+Doc1.docx
+__pycache__\detect_visage.cpython-39.pyc
+
