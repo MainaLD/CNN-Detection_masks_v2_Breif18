@@ -26,3 +26,17 @@ Développer une application Streamlit capable à détecter/localiser le ou les v
     - l'environnement : requirements.txt
 
 **************************************************************************************************************
+## Application streamlit : "Détection des masques "
+lien : [site](https://share.streamlit.io/mainald/18_model_ia_detection_masks_2/main/app.py)
+
+Dans l'application je propose de détecter les visages sur les images, puis de détecter si la personne porte une masque ou non.
+Je donne le résultats obtenus et la possibilité d'importer ce résultat. 
+
+### Détection par import d'une image, avec image type pré-importé
+![1](images\Capture01.JPG)
+![2](images\Capture02.JPG)
+### Détection par prise d'une image avec la webcam
+![3](images\Capture03.JPG)
+![4](images\Capture04.JPG)
+
+

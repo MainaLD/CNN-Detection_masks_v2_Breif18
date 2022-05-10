@@ -28,7 +28,7 @@ def detect_mask(image):
 
 def main():
     """Face Detection App"""
-    st.title("Application de détection de visage")
+    st.title("Application de détection de masques")
     st.text("Avec Streamlit et OpenCV")
     
     activities = ["Importer image","Image par webcam","Autre"]
