@@ -33,10 +33,10 @@ Dans l'application je propose de détecter les visages sur les images, puis de d
 Je donne le résultats obtenus et la possibilité d'importer ce résultat. 
 
 ### Détection par import d'une image, avec image type pré-importé
-![1](images\Capture01.JPG)
-![2](images\Capture02.JPG)
+![1](./images/Capture01.JPG)
+![2](./images/Capture02.JPG)
 ### Détection par prise d'une image avec la webcam
-![3](images\Capture03.JPG)
-![4](images\Capture04.JPG)
+![3](./images/Capture03.JPG)
+![4](./images/Capture04.JPG)
 
 
