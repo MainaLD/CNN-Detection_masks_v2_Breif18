@@ -8,7 +8,7 @@ import tensorflow as tf
 from tensorflow import keras
 
 filepath = './model_mask.h5'
-loaded_model = keras.models.load_model(filepath)
+# loaded_model = keras.models.load_model(filepath)
 
 liste_label = ['sans masque', 'avec masque']
 # Modele de détection des visage
@@ -16,7 +16,8 @@ cascade_path = "./cascades/haarcascade_frontalface_default.xml"
 
 def detecter_masks(imgr):
     img_exp = np.expand_dims(np.array(imgr)/255.0, axis=0)
-    prediction = loaded_model.predict(img_exp)
+    # prediction = loaded_model.predict(img_exp)
+    prediction = 1
     resultat = liste_label[np.argmax(prediction)]
     image_pred = cv2.putText(imgr, resultat, (20, 30), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, 1, (255,0,0))
     return image_pred, resultat
