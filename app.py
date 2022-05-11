@@ -56,7 +56,7 @@ def main():
         picture = st.camera_input("Prendre une capture")
 
         if st.button("Détecter les masques"):
-            detect_mask(picture)
+            detecter_mask(picture)
 
 
     elif choice == 'Autre':
