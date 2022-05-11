@@ -7,22 +7,22 @@ import keras
 import tensorflow as tf
 from tensorflow import keras
 
-# filepath = './model_mask.h5'
+filepath = './model_mask.h5'
 # loaded_model = keras.models.load_model(filepath)
 
 liste_label = ['sans masque', 'avec masque']
 # Modele de détection des visage
 cascade_path = "./cascades/haarcascade_frontalface_default.xml"
 
-def detecter_masks(imgr, model):
+def detecter_masks(imgr):
     img_exp = np.expand_dims(np.array(imgr)/255.0, axis=0)
-    prediction = model.predict(img_exp)
-    # prediction = 1
+    # prediction = loaded_model.predict(img_exp)
+    prediction = 1
     resultat = liste_label[np.argmax(prediction)]
     image_pred = cv2.putText(imgr, resultat, (20, 30), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, 1, (255,0,0))
     return image_pred, resultat
 
-def afficher_visage(img_path, model):
+def afficher_visage(img_path):
     to_image = Image.open(img_path)
     src = cv2.cvtColor(np.array(to_image), cv2.COLOR_RGB2BGR)
     cascade = cv2.CascadeClassifier(cascade_path)
@@ -37,7 +37,7 @@ def afficher_visage(img_path, model):
             imgr = cv2.resize(img_couper,(224,224), interpolation = cv2.INTER_AREA)
             nom_img = "visage{}".format(i+1)
 
-            imgr, mask_port = detecter_masks(imgr, model)
+            imgr, mask_port = detecter_masks(imgr)
             visages.append(cv2.cvtColor(imgr, cv2.COLOR_BGR2RGB))
             list_nom_img.append(nom_img)
 
