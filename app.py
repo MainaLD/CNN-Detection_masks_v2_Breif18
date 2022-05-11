@@ -3,6 +3,13 @@ from PIL import Image
 import cv2
 from detect_mask import afficher_visage
 
+import tensorflow as tf
+from keras.layers import Dense, Flatten
+from keras.models import Model, Sequential
+from tensorflow import keras
+# from tensorflow import applications
+filepath_model = './model_mask.hdf5'
+
 image_defaut = "./images/004.jpg"
 
 @st.cache
@@ -26,6 +33,22 @@ def detect_mask(image):
     st.download_button("Télécharger tableau", csv, "file.csv", "text/csv", key='download-csv')
 
 
+
+def import_model(filepath_model):
+    # pour .hdf5
+    model = tf.keras.applications.MobileNet(include_top=False,weights="imagenet",input_shape=(224, 224, 3))
+
+    flat1 = Flatten()(model.layers[-1].output)
+    class1 = Dense(256, activation='relu')(flat1)
+    output = Dense(2, activation='softmax')(class1)
+
+    model = Model(inputs = model.inputs, outputs = output)
+
+    model.load_weights(filepath_model)
+    return model
+
+
+
 def main():
     """Face Detection App"""
     st.title("Application de détection de masques")
@@ -33,6 +56,8 @@ def main():
     
     activities = ["Importer image","Image par webcam","Autre"]
     choice = st.sidebar.selectbox("Choix",activities)
+
+    model = import_model(filepath_model)
     
     if choice == 'Importer image':
         st.subheader("Détection de masques sur 1 image")      
@@ -41,14 +66,14 @@ def main():
         if image_file is not None:    
             st.image(image_file, use_column_width='auto', caption= "Image originale")
             if st.button("Détecter les masques"):
-                detect_mask(image_file)
+                detect_mask(image_file, model)
         
         else:
             img_defaut = Image.open(image_defaut)
             st.text("Image chargée par défaut")
             st.image(img_defaut, use_column_width='auto')
             if st.button("Détecter les masques"):
-                detect_mask(image_defaut)
+                detect_mask(image_defaut, model)
 
 
     elif choice == 'Image par webcam':
