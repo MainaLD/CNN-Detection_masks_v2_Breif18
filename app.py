@@ -7,6 +7,7 @@ import tensorflow as tf
 from keras.layers import Dense, Flatten
 from keras.models import Model, Sequential
 from tensorflow import keras
+
 filepath_model = 'model.hdf5'
 
 image_defaut = "./images/004.jpg"
@@ -20,6 +21,7 @@ def load_image(img):
 def convert_df(df):
     return df.to_csv().encode('utf-8')
 
+@st.cache
 def import_model(filepath_model):
     # pour .hdf5
     model = tf.keras.applications.MobileNet(include_top=False,weights="imagenet",input_shape=(224, 224, 3))
@@ -30,7 +32,7 @@ def import_model(filepath_model):
     model.load_weights(filepath_model)
     return model
 
-
+@st.cache
 def detecter_mask(image, model):
     visages, list_nom_img, tableau = afficher_visage(image, model)
 
