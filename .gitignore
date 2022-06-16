@@ -18,4 +18,6 @@ app · Streamlit.jpg
 .gitignore
 detect_mask_sauv.py
 app_sauv.py
+Mask_Detection
+save
 
