@@ -20,7 +20,7 @@ Développer une application Streamlit capable à détecter/localiser le ou les v
 - Application streamlit : app.py
 - détection de masques : detect_mask.py
 - les documents annexes au bon fonctionnements de l'application streamlit :
-    - modèle IA : [model_mask.h5](https://drive.google.com/file/d/1-4OFNg_QGEQLkae8Xg1roJzZnRm1SuJw/view?usp=sharing)
+    - modèle IA : [model_mask.h5](https://drive.google.com/file/d/1bD80atairFBvOwptcJ7nU3VqpiUlpnY0/view?usp=share_link)
     - image par défaut : 004.jpg
     - base de données de reconnaissance des visage openCV : cascades\haarcascade_frontalface_default.xml
     - l'environnement : requirements.txt
