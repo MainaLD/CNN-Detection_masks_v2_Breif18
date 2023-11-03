@@ -8,7 +8,7 @@ from keras.layers import Dense, Flatten
 from keras.models import Model, Sequential
 from tensorflow import keras
 
-filepath_model = 'model.hdf5'
+filepath_model = './ressources/model/model.hdf5'
 
 image_defaut = "./images/004.jpg"
 

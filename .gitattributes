@@ -1,0 +1,7 @@
+*.ipynb linguist-language=Jupyter Notebook
+*.py linguist-language=Python
+*.md linguist-language=Markdown
+*.txt linguist-language=Requirement
+*.jpg linguist-language=Image
+*.h5 linguist-language=Model
+*.xml linguist-language=Model

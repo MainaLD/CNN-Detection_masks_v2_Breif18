@@ -1,23 +1,10 @@
-model_mask.h5
+__pycache__
+.env
+.ipynb_checkpoints
 autre
-Model_detection_Appli_detection-ds-notebook.ipynb
-Model_detection_Appli_detection.ipynb
-Model_detection_Model_CNN.ipynb
-Appli_detection.ipynb
-app2.py
-detection_visage.py
-detect_visage.py
-detection_mask.py
-images_concert-covid-barcelone_6304058.jpg
-images/Document1.jpg
-Doc1.docx
-__pycache__/detect_visage.cpython-39.pyc
-app · Streamlit_ import image1.jpg
-app · Streamlit_ import image2.jpg
-app · Streamlit.jpg
-.gitignore
-detect_mask_sauv.py
-app_sauv.py
-Mask_Detection
+Mask_Detection/Mask_Data
+Mask_Detection/model
+Mask_Detection/model.h5
+Mask_Detection/model.hdf5
 save
 

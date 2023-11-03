@@ -11,7 +11,7 @@ from tensorflow import keras
 
 liste_label = ['avec masque', 'sans masque']
 # Modele de détection des visage
-cascade_path = "./cascades/haarcascade_frontalface_default.xml"
+cascade_path = "./ressources/cascades/haarcascade_frontalface_default.xml"
 
 # Fonction qui prédit si le visage détecter porte un masque ou non
 def detecter_masks(imgr, model):

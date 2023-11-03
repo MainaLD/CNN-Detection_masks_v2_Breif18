@@ -22,7 +22,7 @@ Développer une application Streamlit capable à détecter/localiser le ou les v
 - les documents annexes au bon fonctionnements de l'application streamlit :
     - modèle IA : [model_mask.h5](https://drive.google.com/file/d/1-4OFNg_QGEQLkae8Xg1roJzZnRm1SuJw/view?usp=sharing)
     - image par défaut : 004.jpg
-    - base de données de reconnaissance des visage openCV : cascades\haarcascade_frontalface_default.xml
+    - base de données de reconnaissance des visage openCV : [haarcascade_frontalface_default.xml](./ressources/cascades/haarcascade_frontalface_default.xml)
     - l'environnement : requirements.txt
 
 **************************************************************************************************************
